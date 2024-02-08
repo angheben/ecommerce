@@ -21,6 +21,9 @@ class IndexView(ListView):
 
 
 class FormsView(FormView):
+    """
+    This class will serve as
+    """
     template_name = 'signup.html'
     form_class = SignupForm
     success_url = reverse_lazy('core:login')
