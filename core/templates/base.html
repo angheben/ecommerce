@@ -19,8 +19,9 @@
     <a href="/" class="text-xl font-semibold ml-8">e-commerce</a>
 
     <div class="flex items-center space-x-6 mr-6">
-
-        <a href="{% url 'item:new' %}" class="px-6 py-3 text-lg font-semibold bg-purple-500 text-white rounded-xl hover:bg-gray-700">New Item</a>
+        {% if request.user.is_superuser %}
+            <a href="{% url 'item:new' %}" class="px-6 py-3 text-lg font-semibold bg-purple-500 text-white rounded-xl hover:bg-gray-700">New Items</a>
+        {% endif %}
         <a href="{% url 'item:items' %}" class="px-6 py-3 text-lg font-semibold bg-pink-500 text-white rounded-xl hover:bg-gray-700">Browse</a>
 
         {% if request.user.is_authenticated %}

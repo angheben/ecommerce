@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 
 from pathlib import Path
 import os
+import storages
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -105,9 +106,9 @@ DATABASES = {
 
 # Amazon S3 settings
 
-AWS_ACCESS_KEY_ID = 'AKIAYS2NQPLDY67NECEH'
-AWS_SECRET_ACCESS_KEY = 'QbZxibaLNb0kDwZRPVNmEA5n8mY/DKpvxEONjv6'
-AWS_STORAGE_BUCKET_NAME = 'ecommercevitor'
+AWS_ACCESS_KEY_ID = 'AKIAYS2NQPLD4AVCINA4'
+AWS_SECRET_ACCESS_KEY = '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'
+AWS_STORAGE_BUCKET_NAME = 'ecommercebucketvitor'
 AWS_S3_SIGNATURE_NAME = 's3v4',
 AWS_S3_REGION_NAME = 'us-east-2'
 AWS_S3_FILE_OVERWRITE = False
