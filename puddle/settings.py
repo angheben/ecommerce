@@ -49,6 +49,8 @@ INSTALLED_APPS = [
     'item',
     'conversation',
     'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
     'allauth.socialaccount.providers.google',
 ]
 
@@ -72,6 +74,10 @@ AUTHENTICATION_BACKENDS = [
     # `allauth` specific authentication methods, such as login by email
     'allauth.account.auth_backends.AuthenticationBackend',
 ]
+
+# Google Login
+SITE_ID = 1
+
 
 ROOT_URLCONF = 'puddle.urls'
 
