@@ -10,7 +10,7 @@ urlpatterns = [
     path("", include('core.urls')),
     path('inbox', include('conversation.urls')),
     path("", include("django.contrib.auth.urls")),
-    path('accounts/', include('allauth.urls')),
+    # path('accounts/', include('allauth.urls')),
 ]
 
 # Add serving of static files for development
