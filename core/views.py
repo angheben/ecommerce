@@ -22,7 +22,7 @@ class IndexView(ListView):
 
 class FormsView(FormView):
     """
-    This class will serve as
+    This class will serve as the signup form model for users
     """
     template_name = 'signup.html'
     form_class = SignupForm

@@ -1,7 +1,6 @@
 <!-- login.html -->
 
 {% extends 'base.html' %}
-{% load socialaccount %}
 
 {% block title %}Log in{% endblock %}
 
@@ -9,17 +8,17 @@
 <div class="mt-24">
     <div class="w-1/2 my-6 mx-auto p-6 bg-gray-100 rounded-xl">
         <h1 class="mb-6 text-3xl">Log In</h1>
-        <form method="post" action="{% url 'account_login' %}">
+        <form method="post" action="{% url 'login' %}">
             {% csrf_token %}
 
             <div class="mb-3">
                 <label for="id_username" class="inline-block mb-2">Username</label><br>
-                <input type="text" name="username" id="id_username">
+                {{ form.username }}
             </div>
 
             <div class="mb-3">
-                <label for="id_password" class="inline-block mb-2">Password</label><br>
-                <input type="password" name="password" id="id_password">
+                <label for="id_username" class="inline-block mb-2">Password</label><br>
+                {{ form.password }}
             </div>
 
             {% if form.errors or form.non_field_errors %}
@@ -33,9 +32,8 @@
 
             <button class="py-4 px-8 text-lg bg-green-500 hover:bg-teal-700 rounded-xl text-white" type="submit">Log in</button>
         </form>
-        <p class="py-4 px-4">Don't have an account? Create <a class="text-red text-lg" href="{% url 'account_signup' %}">here</a></p>
+        <p class="py-4 px-4">Don't have an account? Create <a class="text-red text-lg" href="{% url 'core:signup' %}">here</a></p>
         <div class="mb-3">
-            <a href="{% provider_login_url 'google' %}" class="py-4 px-8 text-lg bg-red-600 hover:bg-red-800 rounded-xl text-white">Log in with Google</a>
         </div>
     </div>
 </div>
