@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-qale-q#m!ynmd#of(ytqbxeai+nroos#0(pvbc+lb%#3=@5fqz
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['3.144.113.238', '187.109.101.107', '3.129.22.143', '127.0.0.1', '3.141.138.142']
+ALLOWED_HOSTS = ['3.144.113.238', '187.109.101.107', '3.129.22.143', '127.0.0.1', '3.141.138.142', '187.109.100.218']
 
 # Those variables overwrite the django standard url for the login page in the 'django.contrib.auth' in the url.py file
 LOGIN_URL = '/login/'
