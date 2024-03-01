@@ -97,10 +97,10 @@ WSGI_APPLICATION = 'puddle.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'ecommercedb',
+        'NAME': 'ecommerceRDS',
         'USER': 'postgres',
         'PASSWORD': 'gabi2025',
-        'HOST': 'ecommercedb.crs64ao8ab3d.us-east-2.rds.amazonaws.com',
+        'HOST': 'ecommercerds.c1akmeea8ccl.us-east-2.rds.amazonaws.com',
         'PORT': '5432',
     }
 }
@@ -108,9 +108,9 @@ DATABASES = {
 
 # Amazon S3 settings
 
-AWS_ACCESS_KEY_ID = 'AKIAYS2NQPLD4AVCINA4'
-AWS_SECRET_ACCESS_KEY = '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'
-AWS_STORAGE_BUCKET_NAME = 'ecommercebucketvitor'
+AWS_ACCESS_KEY_ID = 'AKIATCKATOZYL7TQHG64'
+AWS_SECRET_ACCESS_KEY = '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'
+AWS_STORAGE_BUCKET_NAME = 's3ecommerce'
 AWS_S3_SIGNATURE_NAME = 's3v4',
 AWS_S3_REGION_NAME = 'us-east-2'
 AWS_S3_FILE_OVERWRITE = False
